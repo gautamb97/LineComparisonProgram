@@ -39,12 +39,26 @@ public class LineComparison {
 		else
 			System.out.println("Both the lines are not equal in length");
 	}
+	
+	public void comparisonOfTwoLines() {
+		Integer FirstLineValue = Integer.valueOf(LengthOfLine);
+		Integer SecondLineValue = Integer.valueOf(LengthOfSecondLine);
+		int difference = (FirstLineValue.compareTo(SecondLineValue));
+		if (FirstLineValue == SecondLineValue)
+			System.out.println("Both are equal");
+		else if (FirstLineValue < SecondLineValue)
+			System.out.println("Length of line one less than line two by this much points "+difference);
+		else
+			System.out.println("Length of line one is greater than line two by this much points "+difference);
+			
+	}
 	public static void main(String[] args) {
 		System.out.println("Welcome to Line Comparison Computation Program");
 		LineComparison calculation = new LineComparison();
 		calculation.calculatingLengthOfLine();
 		calculation.calculatingLengthOfLineTwo();
 		calculation.checkingEqualityOfTwoLines();
+		calculation.comparisonOfTwoLines();
 	}
 
 }
